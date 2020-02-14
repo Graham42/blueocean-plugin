@@ -1,6 +1,7 @@
 // @flow
 
 import React, { Component, PropTypes } from 'react';
+import { Linkify } from "."
 
 export class Alerts extends Component {
     render() {
@@ -11,7 +12,9 @@ export class Alerts extends Component {
                 <div className="border">&nbsp;</div>
                 <div className="title-div">
                     <span className="title">{title}</span>
-                    <span className="message">{message}</span>
+                    <span className="message">
+                        <Linkify>{message}</Linkify>
+                    </span>
                 </div>
             </div>
         );
